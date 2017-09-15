@@ -1,4 +1,5 @@
 import {Passenger} from '../shared/passenger';
+import * as angular from 'angular';
 
 export class PassengerService {
 
@@ -6,7 +7,7 @@ export class PassengerService {
         private $http: ng.IHttpService) {
     }
 
-    find(name): Promise<Passenger[]> {
+    find(name): angular.IPromise<Passenger[]> {
         var url = 'http://www.angular.at/api/passenger';
 
         var urlParams = { name: name };
